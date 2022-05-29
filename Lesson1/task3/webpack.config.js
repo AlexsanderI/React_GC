@@ -1,12 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const path = require('path');
+const path = require('path');
 
 module.exports = {
-  // mode: 'production',
-  // entry: './src/index.js',
-  // output: {
-  //   path: path.resolve(__dirname, 'review_build'),
-  // },
+  mode: 'production',
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'review_build'),
+  },
   module: {
     rules: [
       {
@@ -25,9 +25,8 @@ module.exports = {
       inject: 'body',
     }),
   ],
-  // performance: {
-  //   hints: false,
-  //   maxEntrypointSize: 512000,
-  //   maxAssetSize: 512000,
-  // },
+  performance: {
+    maxEntrypointSize: 270000,
+    maxAssetSize: 270000,
+  },
 };
