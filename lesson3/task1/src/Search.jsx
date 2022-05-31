@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Search = (props) => {
+const Search = (props) => {
   // Search - компонента, пишется всегда с большой буквы избигаем дублирование кода
   // props - свойства(объект) компонента, передаются в виде аргумента
   console.log(props);
@@ -14,3 +14,5 @@ export const Search = (props) => {
     </div>
   );
 };
+
+export default Search;
