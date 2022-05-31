@@ -1,12 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import './search.scss';
 
-const rootElement = document.querySelector('#root');
-
-const Greeting = (props) => {
-  // Greeting - компонента, пишется всегда с большой буквы избигаем дублирование кода
+export const Search = (props) => {
+  // Search - компонента, пишется всегда с большой буквы избигаем дублирование кода
   // props - свойства(объект) компонента, передаются в виде аргумента
   console.log(props);
   return (
@@ -19,5 +14,3 @@ const Greeting = (props) => {
     </div>
   );
 };
-
-ReactDOM.render(<Greeting name='Tom' age={17} />, rootElement);
