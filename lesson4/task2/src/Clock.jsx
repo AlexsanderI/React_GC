@@ -12,7 +12,7 @@ class Clock extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      offset: this.props.timeZone,
+      offset: this.props.offset,
     };
 
     // Bad practis use setIntercal into constructor
@@ -26,9 +26,9 @@ class Clock extends Component {
     return (
       <>
         <div className="clock">
-          <div className="clock__location">{this.props.city}</div>
+          <div className="clock__location">{this.props.location}</div>
           <div className="clock__time">
-            {moment(getTimeWithOffset(this.props.timeZone)).format('hh:mm:ss A')}
+            {moment(getTimeWithOffset(this.props.offset)).format('hh:mm:ss A')}
           </div>
         </div>
       </>

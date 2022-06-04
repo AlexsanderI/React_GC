@@ -3,10 +3,9 @@ import Clock from './Clock.jsx';
 
 const App = () => (
   <>
-    <Clock timeZone={-5} city={'New York'} />
-
-    <Clock timeZone={2} city={'Kyiv'} />
-    <Clock timeZone={0} city={'London'} />
+    <Clock offset={-5} location={'New York'} />
+    <Clock offset={0} location={'London'} />
+    <Clock offset={2} location={'Kyiv'} />
   </>
 );
 
