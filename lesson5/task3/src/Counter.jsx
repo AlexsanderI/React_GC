@@ -21,13 +21,21 @@ class Counter extends React.Component {
     });
   };
 
+  reset = () => {
+    this.setState({
+      counter: 0,
+    });
+  };
+
   render() {
     return (
       <div className="counter">
         <button data-action="decrease" className="counter__button" onClick={this.decrement}>
           -
         </button>
-        <span className="counter__value">{this.state.counter}</span>
+        <span className="counter__value" onClick={this.reset}>
+          {this.state.counter}
+        </span>
         <button data-action="increase" className="counter__button" onClick={this.increment}>
           +
         </button>

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const App = () => {
+const Colors = () => {
   return <div>Hello, React!</div>;
 };
 
-export default App;
+export default Colors;
