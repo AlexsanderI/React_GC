@@ -15,7 +15,7 @@ class Clock extends Component {
       offset: this.props.timeZone,
     };
 
-    // Bad practis use setIntercal into constructor
+    // Bad practis use setIntercal into constructor.
 
     setInterval(() => {
       this.setState({});
