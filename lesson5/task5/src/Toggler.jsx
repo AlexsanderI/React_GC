@@ -21,13 +21,13 @@ class Toggler extends React.Component {
     if (this.state.statusBtn) {
       return (
         <button onClick={this.handClick} className="toggler">
-          Off
+          On
         </button>
       );
     }
     return (
       <button onClick={this.handClick} className="toggler">
-        On
+        Off
       </button>
     );
   }
