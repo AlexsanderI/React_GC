@@ -2,7 +2,7 @@
 // make text mouseover/mouseout
 import React from 'react';
 
-class ColorsPicker extends React.Component {
+class ColorPicker extends React.Component {
   constructor(proper) {
     super(proper);
     this.state = {
@@ -58,7 +58,7 @@ class ColorsPicker extends React.Component {
     );
   }
 }
-// const ColorsPicker = () => (
+// const ColorPicker = () => (
 //   <div className="picker">
 //     <div className="picker__title">Yi</div>
 //     {/* <div className="clock__location">{this.props.location}</div> */}
@@ -66,4 +66,4 @@ class ColorsPicker extends React.Component {
 //   </div>
 // );
 
-export default ColorsPicker;
+export default ColorPicker;
