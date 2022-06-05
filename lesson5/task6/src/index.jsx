@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Tonggler from './Tonggler.jsx';
+import App from './App.jsx';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<Tonggler />, rootElement);
+ReactDOM.render(<App />, rootElement);
