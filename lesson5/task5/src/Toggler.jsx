@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-class Tonggler extends React.Component {
+class Toggler extends React.Component {
   constructor(proper) {
     super(proper);
     this.state = {
@@ -26,4 +26,4 @@ class Tonggler extends React.Component {
   }
 }
 
-export default Tonggler;
+export default Toggler;
