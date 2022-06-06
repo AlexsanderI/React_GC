@@ -1,9 +1,9 @@
 import React from 'react';
 
-const GoodButton = () => (
-  <button className="fancy-button" onClick={() => alert('Good job!')}>
-    Click me!
+const Login = ({ onLogin }) => (
+  <button className="btn login" onClick={onLogin}>
+    Login
   </button>
 );
 
-export default GoodButton;
+export default Login;

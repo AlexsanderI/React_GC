@@ -1,5 +1,7 @@
 import React from 'react';
 import Greeting from './Greeting';
+import Login from './Login';
+import Logout from './Logout';
 
 class Auth extends React.Component {
   constructor(props) {
@@ -24,15 +26,15 @@ class Auth extends React.Component {
 
   render() {
     //   мщжно использовать тернарный оператор
-    const button = this.state.isLoggedIn ? (
-      <button className="btn logout" onClick={this.handleLogout}>
-        Logout
-      </button> // усли это да (this.state.isLoggedIn) использовать эту <= кнопку
-    ) : (
-      <button className="btn login" onClick={this.handleLogin}>
-        Login
-      </button> // усли это нет (this.state.isLoggedIn) использовать эту <= кнопку
-    );
+    // const button = this.state.isLoggedIn ? (
+    //   <button className="btn logout" onClick={this.handleLogout}>
+    //     Logout
+    //   </button> // усли это да (this.state.isLoggedIn) использовать эту <= кнопку
+    // ) : (
+    //   <button className="btn login" onClick={this.handleLogin}>
+    //     Login
+    //   </button> // усли это нет (this.state.isLoggedIn) использовать эту <= кнопку
+    // );
 
     // либо использовать if вместо тернарного оператора
     // let button;
@@ -45,8 +47,12 @@ class Auth extends React.Component {
 
     return (
       <div className="panel">
-        <Greeting isLoggedIn={this.state.isLoggedIn} />
-        <div>{button}</div>
+        <Greeting isLoggedIn={this.state.isLoggedIn} />{' '}
+        {this.state.isLoggedIn ? (
+          <Login onLogin={this.handleLogout} />
+        ) : (
+          <Logout onLogout={this.handleLogin} />
+        )}
       </div>
     );
   }
