@@ -58,12 +58,5 @@ class ColorPicker extends React.Component {
     );
   }
 }
-// const ColorPicker = () => (
-//   <div className="picker">
-//     <div className="picker__title">Yi</div>
-//     {/* <div className="clock__location">{this.props.location}</div> */}
-//     <button className="picker__button picker__button_coral">Off</button>
-//   </div>
-// );
 
 export default ColorPicker;
