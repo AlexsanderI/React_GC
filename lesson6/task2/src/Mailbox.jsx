@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Mailbox = ({ unreadMesasges }) => (
+const Mailbox = ({ unreadMessasges }) => (
   <div className="mailbox">
     <span className="mailbox__text">Messages</span>
-    {unreadMesasges.length > 0 && <span className="mailbox__count">{unreadMesasges.length}</span>}
+    {unreadMessasges.length > 0 && <span className="mailbox__count">{unreadMessasges.length}</span>}
   </div>
 );
 
