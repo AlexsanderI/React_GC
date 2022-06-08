@@ -11,7 +11,9 @@ const Transaction = ({ time, date, from, to, rate, amount }) => (
     <span className="transaction__assets">
       {from} → {to}
     </span>
-    <span className="transaction__rate">{rate}</span>
+    <span className="transaction__rate">
+      {new Intl.NumberFormat('en-GB', { maximumSignificantDigits: 3 }).format(rate)}
+    </span>
     <span className="transaction__amount">
       {new Intl.NumberFormat('en-GB', { maximumSignificantDigits: 3 }).format(amount)}
     </span>
