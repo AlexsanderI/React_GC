@@ -20,7 +20,7 @@ class Life extends React.Component {
   }
 
   // // этот метод выполняется после выполнения условия метода shouldComponentUpdate() и после render()
-  componentDidUpdate(previusProps, previusState) {
+  componentDidUpdate(prevProps, prevState) {
     console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
   }
 
