@@ -15,6 +15,7 @@ class UsersList extends React.Component {
 
   render() {
     console.log(this.props.users);
+    // eslint-disable-next-line no-shadow
     let UsersList;
     if (this.state.sorting) {
       UsersList = this.props.users
