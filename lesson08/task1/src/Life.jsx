@@ -16,7 +16,8 @@ class Life extends React.Component {
     // этот метод принимает условие если эти условия БУДУТ соблюдаются 'true' тогда происходит новый render тоесть обновление (сробатывают до render())
     console.log(nextProps, nextState);
     console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
-    return nextProps.number % 2 === 0;
+    // return nextProps.number % 2 === 0;
+    return true;
   }
 
   // // этот метод выполняется после выполнения условия метода shouldComponentUpdate() и после render()
