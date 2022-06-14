@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-// eslint-disable-next-line import/no-cycle
 import UsersList from './UsersList';
 
 const rootElement = document.querySelector('#root');
@@ -15,7 +14,7 @@ const users = [
   { id: 1234567, name: 'Jack', age: 19 },
   { id: 12345678, name: 'Bom', age: 21 },
   { id: 123456789, name: 'DOM', age: 22 },
-  { id: 1234567890, name: 'Toretto', age: 60 },
+  { id: 1234567890, name: 'Tobretto', age: 60 },
 ];
 
 ReactDOM.render(<UsersList users={users} />, rootElement);

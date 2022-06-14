@@ -22,7 +22,7 @@ class UsersList extends React.Component {
 
   handelChange = elem => {
     this.setState({ value: elem.target.value });
-    console.log(this.state.value);
+    // console.log(this.state.value);
   };
 
   inputFilter = () =>
