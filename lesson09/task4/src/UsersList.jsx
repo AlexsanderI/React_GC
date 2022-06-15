@@ -15,7 +15,6 @@
 import React from 'react';
 import User from './User';
 import Filter from './Filter';
-import './index.jsx';
 
 class UsersList extends React.Component {
   state = { value: '' };
