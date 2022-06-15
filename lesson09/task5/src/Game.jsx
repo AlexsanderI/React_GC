@@ -27,6 +27,7 @@ class Game extends React.Component {
     this.setState({
       history: history.concat([
         {
+          // eslint-disable-next-line object-shorthand
           squares: squares,
         },
       ]),
@@ -43,12 +44,14 @@ class Game extends React.Component {
   }
 
   render() {
+    // eslint-disable-next-line prefer-destructuring
     const history = this.state.history;
     const current = history[this.state.stepNumber];
+    // eslint-disable-next-line no-use-before-define
     const winner = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
-      const desc = move ? 'Go to move #' + move : 'Go to game start';
+      const desc = move ? `Go to move #${move}` : 'Go to game start';
       return (
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
@@ -88,6 +91,7 @@ function calculateWinner(squares) {
     [0, 4, 8],
     [2, 4, 6],
   ];
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
