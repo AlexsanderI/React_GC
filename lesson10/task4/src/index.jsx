@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import FilterableProductTable from './App.jsx';
+import FilterableProductTable from './FilterableProductTable.jsx';
 
 const rootElement = document.querySelector('#root');
 
