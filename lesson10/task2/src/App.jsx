@@ -1,12 +1,12 @@
 import React from 'react';
 import Profile from './Profile';
-import ShopingCart from './ShopingCart';
+import ShoppingCart from './ShoppingCart';
 
 class App extends React.Component {
   state = {
     userData: {
       firstName: 'Alex',
-      lastName: 'Alexander',
+      lastName: 'Alexsashenko',
     },
   };
 
@@ -26,7 +26,7 @@ class App extends React.Component {
       <div className="page">
         <h1 className="title">{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
         <main className="content">
-          <ShopingCart userData={userData} />
+          <ShoppingCart userData={userData} />
           <Profile userData={userData} handelChange={this.handelChange} />
         </main>
       </div>
