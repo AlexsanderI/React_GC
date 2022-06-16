@@ -7,12 +7,12 @@ class ShoppingCart extends React.Component {
     cartItems: [
       {
         id: '1',
-        name: 'iPhone 13',
+        name: 'iPhone 11',
         price: 999,
       },
       {
         id: '2',
-        name: 'iPhone pro',
+        name: 'iPad pro',
         price: 799,
       },
     ],
