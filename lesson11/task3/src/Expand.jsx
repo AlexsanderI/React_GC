@@ -25,7 +25,7 @@ class Expand extends React.Component {
     return (
       <div className="expand border">
         <div className="expand__header">
-          <span className="expand__title">Some title</span>
+          <span className="expand__title">{this.props.title}</span>
           <button className="expand__toggle-btn" onClick={this.toggle}>
             {visible ? '⬆️' : '⬇️'}
           </button>
