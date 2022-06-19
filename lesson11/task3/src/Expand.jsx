@@ -1,27 +1,42 @@
+// make statick page
+// hide expand__contetnt
+// show expand__contetnt
+
 import React from 'react';
-// import PropTypes from 'prop-types';
+import App from './App';
 
-const Expand = () => (
-  //   if (!isOpen) {
-  //     return null;
-  //   }
-  <div className="expand__content">
-    <p>
-      Hooks are a new addition in React 16.8. They let you use state and other React features
-      without writing a className.
-    </p>
-  </div>
-);
-export default Expand;
+class Expand extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: false,
+    };
+    this.toggle = this.toggle.bind(this);
+  }
 
-// {
-/* <div className="dialog">
-      <div className="dialog__heading">
-        <div className="dialog__title">{title}</div>
-        <button className="dialog__close-btn" onClick={onClose}>
-          +
-        </button>
+  toggle() {
+    this.setState({
+      visible: !this.state.visible,
+    });
+  }
+
+  render() {
+    const { visible } = this.state;
+
+    return (
+      <div className="app">
+        <div className="expand border">
+          <div className="expand__header">
+            <span className="expand__title">Some title</span>
+            <button className="expand__toggle-btn" onClick={this.toggle}>
+              {visible ? '⬆️' : '⬇️'}
+            </button>
+          </div>
+          {this.state.visible && <App></App>}
+        </div>
       </div>
-      <div className="dialog__content"> {children}</div>
-    </div> */
-// }
+    );
+  }
+}
+
+export default Expand;
