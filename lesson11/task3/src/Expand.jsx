@@ -3,7 +3,6 @@
 // show expand__contetnt
 
 import React from 'react';
-import App from './App';
 
 class Expand extends React.Component {
   constructor(props) {
@@ -24,16 +23,14 @@ class Expand extends React.Component {
     const { visible } = this.state;
 
     return (
-      <div className="app">
-        <div className="expand border">
-          <div className="expand__header">
-            <span className="expand__title">Some title</span>
-            <button className="expand__toggle-btn" onClick={this.toggle}>
-              {visible ? '⬆️' : '⬇️'}
-            </button>
-          </div>
-          {this.state.visible && <App></App>}
+      <div className="expand border">
+        <div className="expand__header">
+          <span className="expand__title">Some title</span>
+          <button className="expand__toggle-btn" onClick={this.toggle}>
+            {visible ? '⬆️' : '⬇️'}
+          </button>
         </div>
+        {this.state.visible ? <div className="expand__content">{this.props.children}</div> : null}
       </div>
     );
   }
