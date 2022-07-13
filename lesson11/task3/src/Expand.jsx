@@ -27,11 +27,7 @@ class Expand extends React.Component {
         <div className="expand__header">
           <span className="expand__title">{this.props.title}</span>
           <button className="expand__toggle-btn" onClick={this.toggle}>
-            {visible ? (
-              <i className="fas fa-chevron-up"></i>
-            ) : (
-              <i className="fas fa-chevron-down"></i>
-            )}
+            {visible ? '⬆️' : '⬇️'}
           </button>
         </div>
         {this.state.visible ? <div className="expand__content">{this.props.children}</div> : null}
