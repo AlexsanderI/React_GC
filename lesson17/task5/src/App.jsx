@@ -1,7 +1,14 @@
 import React from 'react';
+import Check from './Check';
 
 const App = () => {
-  return <div>Hello, React!</div>;
+  const name = undefined;
+  return (
+    <div>
+      Hello, React!
+      <Check name={name} />
+    </div>
+  );
 };
 
 export default App;
